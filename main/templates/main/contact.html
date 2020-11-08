@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="jumbotron">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    	<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Contact Me:</h5>
+    <p><a href="#" class="btn btn-primary">instagram</a></p>
+    <p><a href="https://github.com/keerthiya-ravi" class="btn btn-primary">github</a></p>
+    <p><a href="https://www.linkedin.com/in/keerthiya-ravi-0ab6541b5/" class="btn btn-primary">linke in</a></p>
+    <p><a href="https://app.slack.com/client/T015YUMCNPN/C015SPBCQP4/user_profile/U0193FWK4LX" class="btn btn-primary">slak</a></p>
+    <p>Phone number :9443819454</p>
+    <p>Email id :Keerthiya2002@gmail.com</p>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-6">
+    	<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    {% load crispy_forms_tags %}
+    <form method="post" action="/contact/">
+    	{% csrf_token %}
+     {{form|crispy}}
+     <button type="submit" class="btn btn-primary">Submit </button>
+    </form> 
+
+  </div>
+</div>
+    </div>
+  </div>
+{% endblock %}

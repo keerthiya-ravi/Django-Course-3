@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron">
+	<div class="container">
+  <h1 class="display-4">Hello, Everyone!</h1>
+  <p class="lead">Welcome to my website...I am keerthiya!!.</p>
+ <img src="{% static 'main/images/roshni.jpg' %}" width="200" height="250"> 
+  <hr class="my-4">
+  <p>I am a student.</p>
+  <a class="btn btn-primary btn-lg" href="/contact" role="button">Contact Me</a>
+  <br>
+  <br>
+</div>
+{% endblock %}
